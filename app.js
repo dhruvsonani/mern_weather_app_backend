@@ -2,6 +2,7 @@ const express = require('express');
 const getCoordsForAddress = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 const getForecast = require('./utils/forecast');
+const PORT = process.env.PORT || 5000
 
 const app = express();
 
@@ -42,4 +43,4 @@ app.get('/api/weather/:loc',async(req,res,next)=>{
 })
 
 
-app.listen(5000);
+app.listen(PORT);
