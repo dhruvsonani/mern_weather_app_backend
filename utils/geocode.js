@@ -23,8 +23,7 @@
 // module.exports = geocode;
 
 const axios = require("axios");
-const API_KEY =
-  "pk.eyJ1IjoiZGhydXZzb25hbmkiLCJhIjoiY2xrcXdqdjVvMTNjODNjb2N4aGoweDkxbSJ9.5GA52CTFJVpGWzmaWfHD5Q";
+const API_KEY = process.env.GEOCODE_API_KEY;
 
 async function getCoordsForAddress(address) {
   const response = await axios.get(

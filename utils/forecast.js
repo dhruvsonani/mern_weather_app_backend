@@ -1,5 +1,5 @@
 const axios = require("axios");
-const API_KEY = "e5f97a91d6a4b6d187b7e13ccc03f384";
+const API_KEY = process.env.FORECAST_API_KEY;
 
 async function getForecast(lat, lng) {
   const response = await axios.get(
